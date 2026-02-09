@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide Peratoran Nasihat 1928</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.slide.active {
+    display: block;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p, li {
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.slide:nth-child(1) { background: #0b3d2e; color: white; }
+.slide:nth-child(2) { background: #f4f4f4; }
+.slide:nth-child(3) { background: #ffffff; }
+.slide:nth-child(4) { background: #f4f4f4; }
+.slide:nth-child(5) { background: #ffffff; }
+</style>
+</head>
+
+<body>
+
+<div class="slide active">
+    <h1>Sintesis Integratif Naqli dan Aqli</h1>
+    <p>Peratoran Nasihat Selangor 1928</p>
+    <p>Muhamad Adha Abd Jalil</p>
+</div>
+
+<div class="slide">
+    <h2>Abstrak</h2>
+    <p>Kajian integrasi Naqli dan Aqli dalam etika kepimpinan.</p>
+</div>
+
+<div class="slide">
+    <h2>Pernyataan Masalah</h2>
+    <ul>
+        <li>Jurang integrasi Naqli dan Aqli.</li>
+        <li>Hakisan integriti penjawat awam.</li>
+        <li>Pengabaian model tempatan.</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h2>Tujuh Lafaz Setia</h2>
+    <ul>
+        <li>Tolong-menolong dalam kebajikan.</li>
+        <li>Larangan mengumpat.</li>
+        <li>Menolak hasad dengki.</li>
+        <li>Larangan berbohong.</li>
+        <li>Konsep adil dan zalim.</li>
+        <li>Larangan takabbur.</li>
+        <li>Menjauhi sifat pemarah.</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h2>Kesimpulan</h2>
+    <p>Model 1928 sebagai asas Human Governance.</p>
+</div>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll(".slide");
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowRight") {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+    }
+    if (e.key === "ArrowLeft") {
+        slides[current].classList.remove("active");
+        current = (current - 1 + slides.length) % slides.length;
+        slides[current].classList.add("active");
+    }
+});
+</script>
+
+</body>
+</html>
